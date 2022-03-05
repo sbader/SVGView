@@ -33,12 +33,12 @@ public class SVGNode: SerializableElement {
         return self.id == id ? self : .none
     }
 
-    public func onTapGesture(_ count: Int = 1, tapClosure: @escaping ()->()) {
-        let newGesture = TapGesture(count: count).onEnded {
-            tapClosure()
-        }
-        gestures.append(AnyGesture(newGesture.map { _ in () }))
-    }
+//    public func onTapGesture(_ count: Int = 1, tapClosure: @escaping ()->()) {
+//        let newGesture = TapGesture(count: count).onEnded {
+//            tapClosure()
+//        }
+//        gestures.append(AnyGesture(newGesture.map { _ in () }))
+//    }
 
     public func addGesture<T: Gesture>(_ newGesture: T) {
         gestures.append(AnyGesture(newGesture.map { _ in () }))
